@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Signup Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="sign-up-form">
+            <h1> Sign Up Now</h1>
+            <form type= "post">
+                <input type="email" class="input-box"  placeholder="your email">
+                <input type="password" class="input-box" placeholder="your password">
+               <p class="z"><span><input type="checkbox"></span>I agree to the terms of services</p>
+
+               <button class="signup-btn">Sign  up</button>
+               <hr>
+                <button type:"button" class="facebook-btn">login with facebook</button>
+               <p> Do you already have an account? <a href="signin.html">sign in </a></p>
+   
+            </form>
+        </div>
+    <script> 
+     var  url="https://reqres.in/api/users"
+       fetch(url)
+        .then(res=>  res.json())
+       .then(res=>
+       {
+           var data=res.data
+           var data1=data[0]
+           var email=data1.email
+           console.log(data)
+           console.log(data1)
+           console.log(data1.email)
+       })
+       
+    </script>
+    </body>
+</html>
